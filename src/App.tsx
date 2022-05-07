@@ -1,7 +1,11 @@
+import './services/firebase'
 
 function App() {
   return (
-    <h1>Hello world!</h1>
+    <div className="App">
+      <h1>Oi</h1>
+
+    </div>
   );
 }
 
