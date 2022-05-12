@@ -2,30 +2,34 @@ import illustrationImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg'
 import googleIconImg from '../assets/images/google-icon.svg'
 
+import { Button } from '../components/Button'
+
+import '../styles/auth.scss'
+
 export function Home() {
   return (
-    <div>
+    <div id="page-auth">
       <aside>
-        <img src={illustrationImg} alt="ilstração simbolizando perguntas e respostas" />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire suas dúvidas em tempo real.</p>
+        <img src={illustrationImg} alt="question and answer illustration" />
+        <strong>Create Live Q&amp;A rooms</strong>
+        <p>Clear your doubts out in real time.</p>
       </aside>
       <main>
-        <div>
-          <img src={logoImg} alt="logomarca letmeask" />
-          <button>
-            <img src={googleIconImg} alt="logo Google" />
-            Crie sua sala com o Google
+        <div className="main-content">
+          <img src={logoImg} alt="letmeask logo" />
+          <button className="create-room">
+            <img src={googleIconImg} alt="Google logo" />
+            Create your room with Google
           </button>
-          <div>ou entre em uma sala</div>
+          <div className="separator">or access a room</div>
           <form>
             <input
               type="text"
-              placeholder="Digite o código da sala"
+              placeholder="Type room id"
             />
-            <button type="submit">
-              Entrar na sala
-            </button>
+            <Button type="submit">
+              Go
+            </Button>
           </form>
         </div>
       </main>
